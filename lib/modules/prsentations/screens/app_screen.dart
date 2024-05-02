@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:realtimechat/configs/screen_config.dart';
+import 'package:realtimechat/routes/routes.dart';
 
 class AppScreen extends StatelessWidget {
   const AppScreen({super.key});
@@ -8,7 +10,8 @@ class AppScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      getPages: [],
+      initialRoute: RouteScreen.home,
+      getPages: getPages,
     );
   }
 }
