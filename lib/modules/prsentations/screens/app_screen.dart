@@ -10,7 +10,7 @@ class AppScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: RouteScreen.home,
+      initialRoute: RouteScreen.signIn,
       getPages: getPages,
     );
   }
