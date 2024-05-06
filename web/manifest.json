@@ -1,6 +1,6 @@
 {
-    "name": "realtimechat",
-    "short_name": "realtimechat",
+    "name": "dilchat",
+    "short_name": "dilchat",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

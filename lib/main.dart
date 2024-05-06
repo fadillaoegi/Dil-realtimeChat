@@ -1,5 +1,5 @@
+import 'package:dilchat/modules/prsentations/screens/app_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:realtimechat/modules/prsentations/screens/app_screen.dart';
 
 void main() {
   runApp(const MainApp());
