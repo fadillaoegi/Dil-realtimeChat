@@ -21,7 +21,7 @@ class SignInScreen extends StatelessWidget {
               width: Get.width / 1.2,
               height: 400.0,
               decoration: BoxDecoration(
-                  boxShadow: [],
+                  boxShadow: const [],
                   color: Colors.blueAccent,
                   // color: ColorApps.primary,
                   borderRadius: BorderRadius.circular(10.0)),
