@@ -1,4 +1,4 @@
-import 'package:dilchat/configs/screen_config.dart';
+import 'package:dilchat/routes/list_pages.dart';
 import 'package:dilchat/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,7 +10,7 @@ class AppScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: RouteScreen.signIn,
+      initialRoute: RouteScreen.signUp,
       getPages: getPages,
     );
   }

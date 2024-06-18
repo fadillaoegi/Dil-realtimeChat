@@ -1,5 +1,7 @@
 import 'package:dilchat/modules/prsentations/controllers/signin_controller.dart';
+import 'package:dilchat/themes/colors.dart';
 import 'package:dilchat/themes/fonts.dart';
+import 'package:dilchat/widgets/btn_default_widget.dart';
 import 'package:dilchat/widgets/form_apps_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -29,8 +31,8 @@ class SignInScreen extends GetView<SignInController> {
                   height: Get.height / 1.9,
                   decoration: BoxDecoration(
                       boxShadow: const [],
-                      color: Colors.blueAccent,
-                      // color: ColorApps.primary,
+                      // color: Colors.blueAccent,
+                      color: ColorApps.primary,
                       borderRadius: BorderRadius.circular(10.0)),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -60,15 +62,25 @@ class SignInScreen extends GetView<SignInController> {
                       const SizedBox(
                         height: 20.0,
                       ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                        width: Get.width,
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(),
-                          child: const Text("Sign In"),
-                        ),
+                      BtnDefault(
+                        text: "Sign In",
+                        onTap: () {},
                       ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Belum Punya Akun ?",
+                            style: white400.copyWith(fontSize: 14.0),
+                          ),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Sign Up",
+                                style: black500.copyWith(fontSize: 12.0),
+                              ))
+                        ],
+                      )
                     ],
                   ),
                 )

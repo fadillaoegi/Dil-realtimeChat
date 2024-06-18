@@ -2,13 +2,14 @@ import 'package:dilchat/modules/prsentations/screens/auth/sigin_screen.dart';
 import 'package:dilchat/modules/prsentations/screens/home_screen.dart';
 import 'package:dilchat/modules/prsentations/screens/profiles/edit_profile_screen.dart';
 import 'package:dilchat/modules/prsentations/screens/profiles/profile_screen.dart';
+import 'package:dilchat/modules/prsentations/screens/splash_screen.dart';
 import 'package:dilchat/routes/routes.dart';
 import 'package:get/get.dart';
 
 List<GetPage<dynamic>>? getPages = [
   GetPage(
     name: RouteScreen.splash,
-    page: () => const HomeScreen(),
+    page: () => const SplashScreen(),
   ),
   GetPage(
     name: RouteScreen.home,

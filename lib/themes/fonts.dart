@@ -1,3 +1,4 @@
+import 'package:dilchat/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -22,3 +23,11 @@ TextStyle black700 =
     GoogleFonts.poppins(color: Colors.black, fontWeight: FontWeight.w700);
 
 // NOTE: FONT STYLE PRIMARY
+TextStyle primary400 =
+    GoogleFonts.poppins(color: ColorApps.primary, fontWeight: FontWeight.w400);
+TextStyle primary500 =
+    GoogleFonts.poppins(color: ColorApps.primary, fontWeight: FontWeight.w500);
+TextStyle primary600 =
+    GoogleFonts.poppins(color: ColorApps.primary, fontWeight: FontWeight.w600);
+TextStyle primary700 =
+    GoogleFonts.poppins(color: ColorApps.primary, fontWeight: FontWeight.w700);
