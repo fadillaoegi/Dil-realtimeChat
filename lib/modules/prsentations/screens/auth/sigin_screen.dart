@@ -1,4 +1,5 @@
 import 'package:dilchat/modules/prsentations/controllers/signin_controller.dart';
+import 'package:dilchat/routes/routes.dart';
 import 'package:dilchat/themes/colors.dart';
 import 'package:dilchat/themes/fonts.dart';
 import 'package:dilchat/widgets/btn_default_widget.dart';
@@ -21,7 +22,7 @@ class SignInScreen extends GetView<SignInController> {
           body: Container(
             height: Get.height,
             width: Get.width,
-            color: Colors.white,
+            color: ColorApps.secondary,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,7 +40,7 @@ class SignInScreen extends GetView<SignInController> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 40.0),
+                        padding: const EdgeInsets.only(bottom: 30.0),
                         child: Text(
                           "Sign In",
                           style: white500.copyWith(fontSize: 34.0),
@@ -74,7 +75,9 @@ class SignInScreen extends GetView<SignInController> {
                             style: white400.copyWith(fontSize: 14.0),
                           ),
                           TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.toNamed(RouteScreen.signUp);
+                              },
                               child: Text(
                                 "Sign Up",
                                 style: black500.copyWith(fontSize: 12.0),

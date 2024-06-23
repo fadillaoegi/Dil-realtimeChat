@@ -1,4 +1,5 @@
 import 'package:dilchat/modules/prsentations/screens/auth/sigin_screen.dart';
+import 'package:dilchat/modules/prsentations/screens/auth/signup_screen.dart';
 import 'package:dilchat/modules/prsentations/screens/home_screen.dart';
 import 'package:dilchat/modules/prsentations/screens/profiles/edit_profile_screen.dart';
 import 'package:dilchat/modules/prsentations/screens/profiles/profile_screen.dart';
@@ -26,6 +27,10 @@ List<GetPage<dynamic>>? getPages = [
   GetPage(
     name: RouteScreen.signIn,
     page: () => const SignInScreen(),
+  ),
+  GetPage(
+    name: RouteScreen.signUp,
+    page: () => const SignUpScreen(),
   ),
   GetPage(
     name: RouteScreen.splash,

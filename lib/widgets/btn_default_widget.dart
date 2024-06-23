@@ -21,7 +21,7 @@ class BtnDefault extends StatelessWidget {
         onPressed: onTap,
         style: ElevatedButton.styleFrom(),
         child: Text(
-          "Sign In",
+          text!,
           style: primary600.copyWith(fontSize: 14.0),
         ),
       ),

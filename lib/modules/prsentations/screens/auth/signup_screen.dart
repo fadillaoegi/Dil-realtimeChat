@@ -21,7 +21,7 @@ class SignUpScreen extends GetView<SignUpController> {
           body: Container(
             height: Get.height,
             width: Get.width,
-            color: Colors.white,
+            color: ColorApps.secondary,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,9 +37,9 @@ class SignUpScreen extends GetView<SignUpController> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 40.0),
+                        padding: const EdgeInsets.only(bottom: 30.0),
                         child: Text(
-                          "Sign In",
+                          "Sign Up",
                           style: white500.copyWith(fontSize: 34.0),
                         ),
                       ),
