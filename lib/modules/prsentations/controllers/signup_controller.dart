@@ -14,7 +14,5 @@ class SignUpController extends GetxController {
   }
 
   // NOTE: FUNCTION OBSECURE
-  seePassword() {
-    obsecureText.value = !obsecureText.value;
-  }
+  seePassword() => obsecureText.value = !obsecureText.value;
 }

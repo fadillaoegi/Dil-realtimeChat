@@ -1,4 +1,5 @@
-import 'package:dilchat/modules/prsentations/controllers/register_controller.dart';
+import 'package:dilchat/modules/prsentations/controllers/signup_controller.dart';
+import 'package:dilchat/routes/routes.dart';
 import 'package:dilchat/themes/colors.dart';
 import 'package:dilchat/themes/fonts.dart';
 import 'package:dilchat/widgets/btn_default_widget.dart';
@@ -72,7 +73,7 @@ class SignUpScreen extends GetView<SignUpController> {
                             style: white400.copyWith(fontSize: 14.0),
                           ),
                           TextButton(
-                              onPressed: () {},
+                              onPressed: () => Get.toNamed(RouteScreen.signIn),
                               child: Text(
                                 "Sign In",
                                 style: black500.copyWith(fontSize: 12.0),

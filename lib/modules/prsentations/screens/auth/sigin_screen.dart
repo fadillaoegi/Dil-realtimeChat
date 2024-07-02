@@ -56,7 +56,7 @@ class SignInScreen extends GetView<SignInController> {
                       FormApps(
                         label: "Password",
                         obscureText: signInC.obsecureText.value,
-                        hint: "",
+                        hint: "******",
                         suffixActive: true,
                         onTap: signInC.seePassword,
                       ),
