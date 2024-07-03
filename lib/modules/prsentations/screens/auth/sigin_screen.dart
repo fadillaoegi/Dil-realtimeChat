@@ -63,7 +63,7 @@ class SignInScreen extends GetView<SignInController> {
                       const SizedBox(
                         height: 20.0,
                       ),
-                      BtnDefault(
+                      BtnApps(
                         text: "Sign In",
                         onTap: () {},
                       ),

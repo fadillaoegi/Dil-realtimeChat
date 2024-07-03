@@ -1,5 +1,6 @@
 import 'package:dilchat/modules/prsentations/screens/auth/sigin_screen.dart';
 import 'package:dilchat/modules/prsentations/screens/auth/signup_screen.dart';
+import 'package:dilchat/modules/prsentations/screens/chats/chat_room_screen.dart';
 import 'package:dilchat/modules/prsentations/screens/home_screen.dart';
 import 'package:dilchat/modules/prsentations/screens/profiles/edit_profile_screen.dart';
 import 'package:dilchat/modules/prsentations/screens/profiles/profile_screen.dart';
@@ -33,7 +34,7 @@ List<GetPage<dynamic>>? getPages = [
     page: () => const SignUpScreen(),
   ),
   GetPage(
-    name: RouteScreen.splash,
-    page: () => const HomeScreen(),
+    name: RouteScreen.chatRoom,
+    page: () => const ChatRoomScreen(),
   ),
 ];

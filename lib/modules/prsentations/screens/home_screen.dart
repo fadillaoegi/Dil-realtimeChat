@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(180, 158, 10, 141),
+      backgroundColor: const Color.fromARGB(180, 158, 10, 141),
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
         height: MediaQuery.sizeOf(context).height,
         width: MediaQuery.sizeOf(context).width,
         child: ListView.builder(
-          itemCount: 10,
+          itemCount: 12,
           itemBuilder: (context, index) {
             return ListTile(
               title: Text(
@@ -44,11 +44,24 @@ class HomeScreen extends StatelessWidget {
                 style: white600,
               ),
               subtitle: Text(
-                "last chat",
+                "hint last chat",
                 style: white400,
               ),
               leading: const CircleAvatar(
                 backgroundColor: Colors.white,
+              ),
+              trailing: SizedBox(
+                height: 24.0,
+                width: 24.0,
+                child: CircleAvatar(
+                  backgroundColor: ColorApps.primary,
+                  child: Center(
+                    child: Text(
+                      "$index",
+                      style: black400.copyWith(fontSize: 12.0),
+                    ),
+                  ),
+                ),
               ),
               onTap: () {
                 Get.toNamed(RouteScreen.chatRoom);
