@@ -37,7 +37,7 @@ class ListMenuItem extends StatelessWidget {
             ),
           ),
           Divider(
-            color: iconColor  ,
+            color: iconColor,
             thickness: 1,
             indent: 12,
             endIndent: 12,

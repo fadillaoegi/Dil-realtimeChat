@@ -12,9 +12,11 @@ class ProfileScreen extends GetView {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "My Profile",
-          style: primary500,
+        title: Center(
+          child: Text(
+            "My Profile",
+            style: primary500,
+          ),
         ),
         leading: InkWell(
           onTap: () => Get.back(),
@@ -62,8 +64,8 @@ class ProfileScreen extends GetView {
                 children: [
                   ListMenuItem(
                     onTap: () {},
-                    text: "",
-                    icon: Icons.settings,
+                    text: "Edit Profile",
+                    icon: Icons.person,
                   ),
                   ListMenuItem(
                     onTap: () {},
