@@ -1,9 +1,13 @@
+import 'package:flutter/material.dart';
+import 'package:dilchat/modules/prsentations/controllers/chat_room_controller.dart';
 import 'package:dilchat/themes/colors.dart';
 import 'package:dilchat/themes/fonts.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:dilchat/widgets/chat_box_widget.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/get_state_manager/src/simple/get_view.dart';
 
-class ChatRoomScreen extends StatelessWidget {
+class ChatRoomScreen extends GetView<ChatRoomController> {
   const ChatRoomScreen({super.key});
 
   @override
@@ -24,129 +28,50 @@ class ChatRoomScreen extends StatelessWidget {
           style: white600.copyWith(fontSize: 20.0),
         ),
       ),
-      body: Container(
+      body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
-            ChatBox(),
-            SizedBox(
+            Expanded(
+              child: ListView.builder(
+                itemCount: 18,
+                itemBuilder: (context, index) => ChatBox(
+                  messages: "PING !! $index",
+                  dummyUserId: index % 2 == 0,
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Container(
-                    width: Get.width * 0.6,
-                    padding: const EdgeInsets.all(10.0),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: ColorApps.primary.withOpacity(0.5),
-                            spreadRadius: 0,
-                            blurRadius: 7,
-                            offset: const Offset(0, 5),
-                          )
-                        ],
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(10),
-                          topRight: Radius.circular(10),
-                          bottomLeft: Radius.circular(10),
-                        )),
-                    child: const Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(
-                          "PING !",
+                  Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: "Type a message...",
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                          borderSide: BorderSide.none,
                         ),
-                      ],
+                        filled: true,
+                        fillColor: Colors.white,
+                      ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 10.0,
-                  ),
-                  Container(
-                    height: 36.0,
-                    width: 36.0,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(100.0)),
-                        boxShadow: [
-                          BoxShadow(
-                            color: ColorApps.primary.withOpacity(0.5),
-                            spreadRadius: 0,
-                            blurRadius: 7,
-                            offset: const Offset(0, 5),
-                          )
-                        ]),
+                  const SizedBox(width: 10.0),
+                  CircleAvatar(
+                    backgroundColor: Colors.blue,
+                    child: IconButton(
+                      icon: const Icon(Icons.send, color: Colors.white),
+                      onPressed: () {},
+                    ),
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
-    );
-  }
-}
-
-class ChatBox extends StatelessWidget {
-  const ChatBox({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(bottom: 20.0),
-          child: Row(
-            children: [
-              Container(
-                height: 36.0,
-                width: 36.0,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius:
-                        const BorderRadius.all(Radius.circular(100.0)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: ColorApps.primary.withOpacity(0.5),
-                        spreadRadius: 0,
-                        blurRadius: 7,
-                        offset: const Offset(0, 5),
-                      )
-                    ]),
-              ),
-              const SizedBox(
-                width: 10.0,
-              ),
-              Container(
-                width: Get.width * 0.6,
-                padding: const EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                      color: ColorApps.primary.withOpacity(0.5),
-                      spreadRadius: 0,
-                      blurRadius: 7,
-                      offset: const Offset(0, 5),
-                    )
-                  ],
-                  borderRadius: const BorderRadius.only(
-                    bottomRight: Radius.circular(10),
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10),
-                  ),
-                ),
-                child: const Text(
-                    "PING !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"),
-              ),
-            ],
-          ),
-        ),
-      ],
     );
   }
 }
