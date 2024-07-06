@@ -13,9 +13,9 @@ class ChatRoomScreen extends GetView<ChatRoomController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorApps.secondary,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: ColorApps.secondary,
+        backgroundColor: ColorApps.primary,
         leading: InkWell(
           onTap: () => Get.back(),
           child: const Icon(
@@ -60,7 +60,7 @@ class ChatRoomScreen extends GetView<ChatRoomController> {
                   ),
                   const SizedBox(width: 10.0),
                   CircleAvatar(
-                    backgroundColor: Colors.blue,
+                    backgroundColor: ColorApps.primary,
                     child: IconButton(
                       icon: const Icon(Icons.send, color: Colors.white),
                       onPressed: () {},
