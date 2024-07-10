@@ -6,7 +6,7 @@ import 'package:dilchat/modules/prsentations/screens/profiles/edit_profile_scree
 import 'package:dilchat/modules/prsentations/screens/profiles/profile_screen.dart';
 import 'package:dilchat/modules/prsentations/screens/splash_screen.dart';
 import 'package:dilchat/routes/routes.dart';
-import 'package:get/get.dart';
+import 'package:get/get_navigation/src/routes/get_route.dart';
 
 List<GetPage<dynamic>>? getPages = [
   GetPage(

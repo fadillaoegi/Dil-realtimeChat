@@ -9,10 +9,14 @@ class BtnApps extends StatelessWidget {
   final IconData? icon;
   final Color? color;
   final Color? fontColor;
+  final double? marginHorizontal;
+  final double? height;
   const BtnApps({
     super.key,
     this.text = "",
     this.onTap,
+    this.marginHorizontal = 0,
+    this.height = 0,
     this.icon = Icons.settings,
     this.color = Colors.white,
     this.fontColor = Colors.white,
@@ -20,8 +24,10 @@ class BtnApps extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       width: Get.width,
+      height: height,
+      margin: EdgeInsets.symmetric(horizontal: marginHorizontal!),
       child: ElevatedButton(
         onPressed: onTap,
         style: ElevatedButton.styleFrom(backgroundColor: color),
@@ -32,7 +38,7 @@ class BtnApps extends StatelessWidget {
               "$text",
               style: GoogleFonts.poppins(
                 color: fontColor,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w600,
                 fontSize: 14.0,
               ),
               // style: primary600.copyWith(fontSize: 14.0),

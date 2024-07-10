@@ -24,7 +24,7 @@ class ChatBox extends StatelessWidget {
           maxWidth: Get.width * 0.75,
         ),
         decoration: BoxDecoration(
-          color: dummyUserId! ? Colors.grey.shade300 : Colors.blue,
+          color: dummyUserId! ? Colors.grey.shade300 : ColorApps.primary,
           boxShadow: [
             BoxShadow(
               color: ColorApps.primary.withOpacity(0.5),
