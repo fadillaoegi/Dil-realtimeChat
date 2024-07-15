@@ -41,7 +41,6 @@ class BtnApps extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                 fontSize: 14.0,
               ),
-              // style: primary600.copyWith(fontSize: 14.0),
             ),
             const SizedBox(
               width: 10.0,

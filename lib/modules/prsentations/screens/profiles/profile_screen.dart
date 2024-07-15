@@ -12,11 +12,9 @@ class ProfileScreen extends GetView {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            "My Profile",
-            style: primary500,
-          ),
+        title: Text(
+          "My Profile",
+          style: primary500,
         ),
         leading: InkWell(
           onTap: () => Get.back(),
@@ -47,6 +45,10 @@ class ProfileScreen extends GetView {
               "UserName",
               style: black500.copyWith(fontSize: 14.0),
             ),
+            Text(
+              "EmailExample@gmail.com",
+              style: black500.copyWith(fontSize: 14.0),
+            ),
             const SizedBox(
               height: 20.0,
             ),
@@ -64,18 +66,18 @@ class ProfileScreen extends GetView {
                 children: [
                   ListMenuItem(
                     onTap: () {},
-                    text: "Edit Profile",
+                    text: "Update Status", 
                     icon: Icons.person,
                   ),
                   ListMenuItem(
                     onTap: () {},
-                    text: "",
+                    text: "Edit Profile",
                     icon: Icons.settings,
                   ),
                   ListMenuItem(
                     onTap: () {},
-                    text: "",
-                    icon: Icons.settings,
+                    text: "Change Theme",
+                    icon: Icons.brightness_medium_sharp,
                   ),
                 ],
               ),

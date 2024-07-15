@@ -29,7 +29,7 @@ class ListMenuItem extends StatelessWidget {
             ),
             title: Text(
               "$text",
-              style: primary400.copyWith(fontSize: 14.0),
+              style: black400.copyWith(fontSize: 14.0),
             ),
             trailing: const Icon(
               Icons.arrow_circle_right_outlined,
