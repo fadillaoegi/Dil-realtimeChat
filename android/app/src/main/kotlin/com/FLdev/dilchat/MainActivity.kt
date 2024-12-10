@@ -1,4 +1,4 @@
-package com.FLdev.dilchat.dilchat
+package com.FLdev.dilchat
 
 import io.flutter.embedding.android.FlutterActivity
 
