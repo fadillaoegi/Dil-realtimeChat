@@ -2,8 +2,10 @@ import 'package:dilchat/app/themes/colors.dart';
 import 'package:dilchat/app/themes/fonts.dart';
 import 'package:dilchat/app/widgets/chat_box_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/get_state_manager/src/simple/get_view.dart';
 
-import 'package:get/get.dart';
 
 import '../controllers/chat_controller.dart';
 

@@ -28,6 +28,7 @@ class ChatBox extends StatelessWidget {
           color: dummyUserId! ? Colors.grey.shade300 : ColorApps.primary,
           boxShadow: [
             BoxShadow(
+              // ignore: deprecated_member_use
               color: ColorApps.primary.withOpacity(0.5),
               spreadRadius: 0,
               blurRadius: 7,
